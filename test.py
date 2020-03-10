@@ -1,13 +1,18 @@
 import unittest
-from RomanToInteger import Solution
+from RomanToInteger_recurrence import Solution
 
 
 class TwoSumTest(unittest.TestCase):
-    def test_last_two(self):
+    def test_add(self):
         temp = Solution()
-        self.input = "III"
-        self.assertEqual(temp.romanToInt("III"), 3)
-        
+        self.input = "MDCLXVI"
+        self.assertEqual(temp.romanToInt(self.input), 1666)
+
+    def test_subtract(self):
+        temp = Solution()
+        self.input = "XLIV"
+        self.assertEqual(temp.romanToInt(self.input), 44)
+
 
 
 if __name__ == "__main__":
